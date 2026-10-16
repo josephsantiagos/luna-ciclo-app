@@ -27,12 +27,15 @@ import 'package:home_widget/home_widget.dart';
 import 'package:menstrudel/services/widget_controller.dart';
 import 'package:menstrudel/services/period_service.dart';
 import 'package:menstrudel/services/log_service.dart';
+import 'package:menstrudel/services/ad_service.dart';
 
 final watchService = WatchSyncService();
 final logsRepository = LogsRepository();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await AdService.initialize();
 
   tz_data.initializeTimeZones();
   try {

@@ -15,6 +15,7 @@ import 'package:menstrudel/l10n/app_localizations.dart';
 import 'package:menstrudel/services/settings_service.dart';
 import 'package:provider/provider.dart';
 import 'package:menstrudel/screens/dashboards/reversible_contraceptive/reversible_contraceptive_screen.dart';
+import 'package:menstrudel/services/ad_service.dart';
 
 enum FabState {
   logPeriod,
@@ -148,9 +149,15 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       appBar: appBars[correctedIndex],
       body: pages[correctedIndex],
-      bottomNavigationBar: MainNavigationBar(
-        selectedIndex: correctedIndex,
-        onDestinationSelected: _onItemTapped,
+      bottomNavigationBar: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const LunaBannerAdWidget(),
+          MainNavigationBar(
+            selectedIndex: correctedIndex,
+            onDestinationSelected: _onItemTapped,
+          ),
+        ],
       ),
       floatingActionButton: AnimatedSwitcher(
               duration: const Duration(milliseconds: 200),
