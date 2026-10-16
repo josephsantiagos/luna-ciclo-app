@@ -129,7 +129,9 @@ class _DataSettingsScreenState extends State<DataSettingsScreen> {
     } finally {
       if (mounted) setState(() => _isLoading = false);
       if (filePath.isNotEmpty) {
-        await File(filePath).delete().catchError((_) => null);
+        try {
+          await File(filePath).delete();
+        } catch (_) {}
       }
     }
   }
@@ -146,11 +148,11 @@ class _DataSettingsScreenState extends State<DataSettingsScreen> {
               throw TimeoutException('File picking timed out.');
             },
           );
-      if (result == null || result.files.single.path == null || !mounted){
+      if (result.isEmpty || result.first.path == null || !mounted){
         return;
       }
 
-      final path = result.files.single.path!;
+      final path = result.first.path!;
 
       showDialog(
         context: context,

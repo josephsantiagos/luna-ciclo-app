@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "com.whitticase.menstrudel"
+    namespace = "com.luna.ciclo.app"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -28,7 +28,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.whitticase.menstrudel"
+        applicationId = "com.luna.ciclo.app"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode

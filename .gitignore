@@ -123,3 +123,9 @@ app.*.symbols
 # Generated localisation files
 app/lib/l10n/app_localizations*.dart
 app/lib/l10n/app_localizations.dart
+
+# Keystore and Signing secrets
+key.properties
+**/key.properties
+*.jks
+*.keystore

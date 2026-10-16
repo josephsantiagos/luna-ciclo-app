@@ -58,5 +58,5 @@ flutter_launcher_icons:
   adaptive_icon_foreground: "assets/icon/menstrudel.png"
   adaptive_icon_monochrome: "assets/icon/menstrudel_monochrome.png"
   
-  image_path: "assets/icon/menstrudel_monochrome.png"
+  image_path: "assets/icon/menstrudel.png"
   image_path_ios: "assets/icon/menstrudel.png"

@@ -4,8 +4,8 @@ import 'package:menstrudel/models/themes/app_theme_mode_enum.dart';
 import 'package:menstrudel/services/settings_service.dart';
 import 'package:menstrudel/models/birth_control/reversible_contraceptives/reversible_contraceptive_types_enum.dart';
 
-/// The base app seed colour.
-const seedColor = Color(0xFF60A5FA);
+/// The base app seed colour (Aesthetic Rose Blush).
+const seedColor = Color(0xFFD87080);
 
 /// The min days for valid cycle length
 const int minValidCycleLength = 10;
